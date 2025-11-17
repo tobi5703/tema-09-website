@@ -1,0 +1,22 @@
+:root {
+    --primary-color: #F1E6D5;
+    --secondary-color: #C0CFAB;
+    --secondary-dark: #678972;
+    --accent-color: #E5C864;
+    --tertiary-color: #B77E7B;
+    --tertiary-dark: #9B2F29;
+    --text-color: #114D3A;
+    --header-font: 'Quicksand';
+    --text-font: 'BeVietnamPro';
+}
+
+@font-face {
+    font-family: 'BeVietnamPro';
+    src: url(./assets/fonts/BeVietnamPro-Regular.ttf) format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url(./assets/fonts/Quicksand-Regular.ttf) format('truetype');
+}
