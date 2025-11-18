@@ -1,3 +1,74 @@
+---
+import Logo from '../assets/imgs/logo_png.png'
+---
+
 <footer>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae ullam fuga assumenda odit reprehenderit autem error cum in id ut.</p>
+    <div id="info-div">
+        <p><span id="bold">TÓKI</span></p>
+        <p>CVR 102131230</p>
+        <p>GL. Tokivej 12, 2300 KBH S</p>
+    </div>
+    <div>
+        <div id="logo-div">
+            <img src={Logo.src} alt="TOKI logo">
+        </div>
+    </div>
+    <div id="soMe-div">
+        <div class="soMe-Logo"></div>
+        <div class="soMe-Logo"></div>
+        <div class="soMe-Logo"></div>
+        <div class="soMe-Logo"></div>
+    </div>
 </footer>
+
+<style>
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: var(--secondary-color);
+        min-height: 120px;
+        padding: 30px 40px;
+    }
+
+    #info-div {
+   
+        align-self: center;
+    }
+
+    #logo-div {
+        height: 100%;
+        aspect-ratio: 1/1;
+    }
+ 
+
+    #soMe-div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .soMe-Logo {
+        width: 60px;
+        aspect-ratio: 1/1;
+        margin: auto;
+        margin-left: 5px;
+        border: 1px solid red;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    #bold {
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 24px;
+        font-family: var(--text-font);
+        color: var(--tertiary-dark);
+        margin: 2px;
+    }
+</style>
