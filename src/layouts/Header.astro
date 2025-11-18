@@ -1,15 +1,98 @@
 ---
 import Logo from '../assets/imgs/logo_png.png'
+
+import '../GlobalStyle.css'
 import { Image } from 'astro:assets';
 ---
 
 <header>
-    <div>
-        <img src={Logo.src}>
-    </div>
+    <a href="#">
+        <div id="logo-div">
+            <div id="img-div">
+                 <img src={Logo.src}>
+            </div>
+           
+            <h1>TÓKI</h1>
+        </div>       
+    </a>
+   
     <ul>
-        <li>tab</li>
-        <li>tab</li>
-        <li>tab</li>
+        <li>
+            <a href="">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="">
+                TÓKI Flow
+            </a>
+        </li>
+        <li>
+            <a href="">
+                Our Work
+            </a>
+        </li>
+        <li>
+            <a href="">
+                Contact
+            </a>
+        </li>
     </ul>
 </header>
+
+<style>
+    header {
+        font-family: var(--text-font);
+        display: flex;
+        flex-direction: row;
+        background-color: var(--secondary-color);
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    #logo-div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #img-div {
+        height: 100%;
+        aspect-ratio: 1/1;
+    }
+
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    h1 {
+        font-family: var(--header-font);
+        margin: auto;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    li {
+        font-size: 32px;
+        margin: auto;
+        list-style-type: none;
+
+    }
+
+    a {
+        color: var(--tertiary-color);
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: var(--tertiary-dark);
+        text-decoration: underline;
+
+    }
+</style>
