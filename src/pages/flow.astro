@@ -16,9 +16,28 @@ import Pie from '../assets/svgs/toki_flow_circle.svg'
 	<Header />
 
 	<Main>
-        <div id="pieDiv">
-                <Pie id="pie" />
+        <div id="flex-container">
+            <div id="pie-div">
+                <Pie id="pie" /> 
+            </div>
+            <div id="rotate-buttons">
+                <div class="rotate-button">
+                </div>
+
+                <div class="rotate-button">
+                </div>
+                
+              
+            </div>
+            <div id="toki-flow-container">
+                <div id="toki-flow-inner-container">
+                    <h1>TÓKI Flow</h1>
+                    <div id="flow-header"> <h2>   Design DNA <span>og</span> Retningsprincipper </h2> </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.</p>
+                </div>
+            </div>
         </div>
+        
 	</Main>
 
 	<Footer />
@@ -26,16 +45,64 @@ import Pie from '../assets/svgs/toki_flow_circle.svg'
 </Layout>
 
 <style> 
-    #pieDiv {
-       position: relative;
-       width: 40%;
-       height: 40%;
-       margin: auto 0;
+    #flex-container {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        width: 100%;
+        height: 100%;
+    }
+
+    #pie-div {
+        width: 100%;
+        height: 100%;
+        grid-column: span 3;
+        margin: auto;
+        padding: 10px 0;
+
     }
 
     #pie  {
+        top: 0;
         position: relative;
         left: -20%;
-        
+    }
+
+    #rotate-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .rotate-button {
+        position: relative;
+        left: -20%;
+        width: 40%;
+        aspect-ratio: 1/1;
+        background-color: red;
+    }
+
+    #toki-flow-container {
+        grid-column: span 4;
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+     #toki-flow-inner-container {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #flow-header {
+        width: 100%;
+        background-color: var(--secondary-color);
+        text-align: center;
+        border-radius: 15px;
     }
 </style>
