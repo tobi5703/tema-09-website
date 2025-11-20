@@ -1,0 +1,35 @@
+---
+//caseName={data.case_name} caseId={data.id} caseText={data.case_text}¨
+
+
+export async function getStaticPaths() {
+    const endpoint = 'https://ovnmxhzggyncqbqhweqf.supabase.co/rest/v1/Toki_cases?select=*'
+    const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im92bm14aHpnZ3luY3FicWh3ZXFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDI0NDgsImV4cCI6MjA3OTExODQ0OH0.A_TwS16TQh9q1xsSlNjf8TKjk4CFkTYfeoK5h41OPls'
+    const options = {
+        method: 'GET',
+        headers: {
+            apikey: key,
+        },
+    };
+
+    const response = await fetch(endpoint, options);
+    const data = await response.json();
+
+    return data.map((post) => {
+        return {
+            params: { id: post.id },
+            props: { post },
+        };
+    });
+
+
+}
+
+
+
+const { id } = Astro.params;
+const { post } = Astro.props;
+---
+
+<h1>{id}: {post.case_name}</h1>
+<p>{post.case_descr}</p>
