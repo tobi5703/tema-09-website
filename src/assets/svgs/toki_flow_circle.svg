@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 355 355" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.475976,0,0,0.475976,-1048.09,-334.098)">
+        <path id="pie_05" d="M2574.17,708.795L2574.17,1074.11L2226.73,961.223C2275.64,810.704 2415.9,708.795 2574.17,708.795Z" style="fill:rgb(219,164,158);"/>
+        <g id="pie_04" transform="matrix(0.30967,-0.950844,0.950844,0.30967,755.71,3189.12)">
+            <path d="M2574.17,708.795L2574.17,1074.11L2226.73,961.223C2275.64,810.704 2415.9,708.795 2574.17,708.795Z" style="fill:rgb(213,140,133);"/>
+        </g>
+        <g id="pie_03" transform="matrix(-0.809552,-0.587048,0.587048,-0.809552,4027.53,3454.82)">
+            <path d="M2574.17,708.795L2574.17,1074.11L2226.73,961.223C2275.64,810.704 2415.9,708.795 2574.17,708.795Z" style="fill:rgb(207,202,189);"/>
+        </g>
+        <g id="pie_02" transform="matrix(-0.806922,0.590658,-0.590658,-0.806922,5285.75,420.386)">
+            <path d="M2574.17,708.795L2574.17,1074.11L2226.73,961.223C2275.64,810.704 2415.9,708.795 2574.17,708.795Z" style="fill:rgb(229,200,100);"/>
+        </g>
+        <g id="pie_01" transform="matrix(0.312373,0.94996,-0.94996,0.312373,2790.43,-1706.77)">
+            <path d="M2574.17,708.795L2574.17,1074.11L2226.73,961.223C2275.64,810.704 2415.9,708.795 2574.17,708.795Z" style="fill:rgb(160,188,169);"/>
+        </g>
+    </g>
+</svg>

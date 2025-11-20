@@ -5,17 +5,18 @@ import '../GlobalStyle.css'
 ---
 
 <main>
-    <h1>
-        Some header text
-        <a href=>cases</a>
-    </h1>
+   <slot />
 </main>
 
 <style> 
+    main {
+        min-height: 600px;
+        background-color: var(--primary-color);
+    }
+
     h1 {
         color: var(--text-color);
         font-family: var(--header-font);
     }
 </style>
 
-<script src='../js/fetchScript.js'>

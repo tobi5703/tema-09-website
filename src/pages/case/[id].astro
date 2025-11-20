@@ -1,4 +1,8 @@
 ---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../layouts/Header.astro';
+import Footer from '../../layouts/Footer.astro';
+import Main from '../../layouts/Main.astro';
 //caseName={data.case_name} caseId={data.id} caseText={data.case_text}¨
 
 
@@ -31,5 +35,24 @@ const { id } = Astro.params;
 const { post } = Astro.props;
 ---
 
-<h1>{id}: {post.case_name}</h1>
-<p>{post.case_descr}</p>
+
+
+<Layout>
+	<Header />
+
+	<Main>
+        <h1>{id}: {post.case_name}</h1>
+        <p>{post.case_description}</p>
+	</Main>
+
+	<Footer />
+
+</Layout>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+</style>

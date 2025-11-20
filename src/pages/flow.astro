@@ -4,6 +4,8 @@ import Header from '../layouts/Header.astro';
 import Footer from '../layouts/Footer.astro';
 import Main from '../layouts/Main.astro';
 
+import Pie from '../assets/svgs/toki_flow_circle.svg'
+
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -14,8 +16,26 @@ import Main from '../layouts/Main.astro';
 	<Header />
 
 	<Main>
+        <div id="pieDiv">
+                <Pie id="pie" />
+        </div>
 	</Main>
 
 	<Footer />
 
 </Layout>
+
+<style> 
+    #pieDiv {
+       position: relative;
+       width: 40%;
+       height: 40%;
+       margin: auto 0;
+    }
+
+    #pie  {
+        position: relative;
+        left: -20%;
+        
+    }
+</style>

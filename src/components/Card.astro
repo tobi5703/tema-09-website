@@ -2,7 +2,7 @@
 const {caseId, caseName, caseText} = Astro.props;
 ---
 
-<p>some case text</p>
+<div>
 <h1>
     {caseName}
 </h1>
@@ -10,3 +10,12 @@ const {caseId, caseName, caseText} = Astro.props;
     {caseText}
 </p>
 <a href=`/case/${caseId}`>link til case {caseId}</a>
+</div>
+
+
+<style>
+    div {
+        border: 1px solid red;
+        padding: 20px;
+    }
+</style>

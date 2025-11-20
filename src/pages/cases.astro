@@ -1,4 +1,9 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Header from '../layouts/Header.astro';
+import Footer from '../layouts/Footer.astro';
+import Main from '../layouts/Main.astro';
+
 //https://ovnmxhzggyncqbqhweqf.supabase.co
 //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im92bm14aHpnZ3luY3FicWh3ZXFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDI0NDgsImV4cCI6MjA3OTExODQ0OH0.A_TwS16TQh9q1xsSlNjf8TKjk4CFkTYfeoK5h41OPls
 import Card from '../components/Card.astro';
@@ -23,7 +28,18 @@ console.log(data)
 //caseName={data.case_name} caseId={data.id} caseText={data.case_text}
 ---
 
-{data.map((elem) => <Card  caseName={elem.case_name} caseId={elem.id} caseText={elem.case_description}/> )}
-<h1>some text</h1>
+<Layout>
+	<Header />
+
+	<Main>
+        {data.map((elem) => <Card  caseName={elem.case_name} caseId={elem.id} caseText={elem.case_description}/> )}
+	</Main>
+
+	<Footer />
+
+</Layout>
+
+
+
 
 
