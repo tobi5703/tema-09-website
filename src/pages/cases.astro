@@ -1,0 +1,29 @@
+---
+//https://ovnmxhzggyncqbqhweqf.supabase.co
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im92bm14aHpnZ3luY3FicWh3ZXFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDI0NDgsImV4cCI6MjA3OTExODQ0OH0.A_TwS16TQh9q1xsSlNjf8TKjk4CFkTYfeoK5h41OPls
+import Card from '../components/Card.astro';
+
+
+const endpoint = 'https://ovnmxhzggyncqbqhweqf.supabase.co/rest/v1/Toki_cases'
+const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im92bm14aHpnZ3luY3FicWh3ZXFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDI0NDgsImV4cCI6MjA3OTExODQ0OH0.A_TwS16TQh9q1xsSlNjf8TKjk4CFkTYfeoK5h41OPls'
+
+const options = {
+    method: 'GET',
+    headers: {
+        apikey: key,
+    },
+};
+
+const data = await fetch(endpoint, options)
+.then((res) => res.json())
+
+console.log('other stuff')
+console.log(data[0])
+
+//caseName={data.case_name} caseId={data.id} caseText={data.case_text}
+---
+
+{data.map((elem) => <Card  caseName={elem.case_name} caseId={elem.id} caseText={elem.case_description}/> )}
+<h1>some text</h1>
+
+
