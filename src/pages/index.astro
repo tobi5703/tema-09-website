@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../layouts/Header.astro';
 import Footer from '../layouts/Footer.astro';
 import Main from '../layouts/Main.astro';
+import FrontpageSection from '../components/FrontpageSection.astro';
+import Pie from '../assets/svgs/toki_flow_circle.svg';
 
 
 
@@ -13,9 +15,24 @@ import Main from '../layouts/Main.astro';
 <Layout>
 	<Header />
 
+
 	<Main>
+		<Pie class="small"></Pie>
+
+		<FrontpageSection SectionHeader="Hvad er vi?" SectionText="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil excepturi, exercitationem, recusandae quae architecto officia vel libero alias cumque reprehenderit illo et ut fugiat vero accusantium! Dicta autem ab iure, molestiae repudiandae eaque deserunt facere expedita ratione in labore! Consequatur necessitatibus recusandae suscipit in ducimus? Modi quo qui dolorem beatae."  />
+		<FrontpageSection SectionHeader="Hvem er vi?" SectionText="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil excepturi, exercitationem, recusandae quae architecto officia vel libero alias cumque reprehenderit illo et ut fugiat vero accusantium! Dicta autem ab iure, molestiae repudiandae eaque deserunt facere expedita ratione in labore! Consequatur necessitatibus recusandae suscipit in ducimus? Modi quo qui dolorem beatae." SectionOrder="order" />
+		<FrontpageSection SectionHeader="Hvad kan vi?" SectionText="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil excepturi, exercitationem, recusandae quae architecto officia vel libero alias cumque reprehenderit illo et ut fugiat vero accusantium! Dicta autem ab iure, molestiae repudiandae eaque deserunt facere expedita ratione in labore! Consequatur necessitatibus recusandae suscipit in ducimus? Modi quo qui dolorem beatae."  />
+		
 	</Main>
 
+	
 	<Footer />
 
 </Layout>
+
+<style>
+	.small{
+		scale: 80%;
+	}
+	
+</style>

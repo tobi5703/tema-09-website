@@ -1,0 +1,40 @@
+---
+const {SectionHeader, SectionText, SectionOrder} = Astro.props;
+---
+<h1>{SectionHeader}</h1>
+<section class={SectionOrder}>
+    <div class="text">
+        <p>{SectionText}</p>
+    </div>
+    <div class={SectionOrder}>
+        <img src="https://picsum.photos/300" >
+    </div>
+</section>
+
+<style>
+    section {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 4rem 8rem;
+        gap: 1rem;
+    }
+
+    h1 {
+    text-align: center;
+    margin-bottom: 4rem;
+    }
+
+    .text{
+        max-width: 800px;
+        justify-self: center;
+    }
+
+    .order{
+        order: -1;
+        display: grid;
+         grid-template-columns: 1fr 2fr;
+         margin: 4rem 10rem;
+    }
+
+ 
+</style>
